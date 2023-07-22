@@ -9,4 +9,10 @@ async fn main() {
         Err(e) => eprintln!("{e}"),
     }
 
+    let response = answer_service.send_jwt_get().await;
+    match response {
+        Ok(res) => println!("{res:?}"),
+        Err(e) => eprintln!("{e}"),
+    }
+
 }
