@@ -1,4 +1,4 @@
-use wat_100_rust::AnswerService;
+use wad_100_rust::AnswerService;
 
 #[tokio::main]
 async fn main() {
