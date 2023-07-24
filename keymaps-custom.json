@@ -1,0 +1,10 @@
+{
+    "workbench.colorTheme": "Codeanywhere Dark",
+    "workspace.preserveWindow": true,
+    "editor.lineNumbers": "relative",
+    "editor.tabCompletion": "on",
+    "editor.codeActionsOnSave": {},
+    "html.autoClosingTags": true,
+    "javascript.autoClosingTags": true,
+    "typescript.autoClosingTags": true
+}

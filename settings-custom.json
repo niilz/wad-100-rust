@@ -1,0 +1,94 @@
+[
+    {
+        "command": "-editor.action.marker.prev",
+        "keybinding": "shift+alt+f8",
+        "when": "editorFocus"
+    },
+    {
+        "command": "editor.action.marker.prev",
+        "keybinding": "shift+alt+f2",
+        "when": "editorFocus"
+    },
+    {
+        "command": "-editor.action.marker.nextInFiles",
+        "keybinding": "f8",
+        "when": "editorFocus"
+    },
+    {
+        "command": "editor.action.marker.nextInFiles",
+        "keybinding": "F2",
+        "when": "editorFocus"
+    },
+    {
+        "command": "-core.previousTab",
+        "keybinding": "ctrlcmd+shift+tab"
+    },
+    {
+        "command": "core.previousTab",
+        "keybinding": "ctrl+Left"
+    },
+    {
+        "command": "workbench.action.terminal.toggleTerminal",
+        "keybinding": "ctrl+0"
+    },
+    {
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "keybinding": "ctrl+`"
+    },
+    {
+        "command": "-terminal:new",
+        "keybinding": "ctrl+shift+`"
+    },
+    {
+        "command": "core.nextTab",
+        "keybinding": "ctrl+Right"
+    },
+    {
+        "command": "-core.nextTab",
+        "keybinding": "ctrlcmd+tab"
+    },
+    {
+        "command": "editor.action.revealDefinition",
+        "keybinding": "Ctrl+Shift+g",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "command": "-editor.action.revealDefinition",
+        "keybinding": "ctrlcmd+f11",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "command": "extension.node-debug.startWithStopOnEntry",
+        "keybinding": "Shift+F11",
+        "when": "debugConfigurationType == pwa-node && !inDebugMode || debugConfigurationType == pwa-extensionHost && !inDebugMode || debugConfigurationType == node && !inDebugMode"
+    },
+    {
+        "command": "-extension.node-debug.startWithStopOnEntry",
+        "keybinding": "F11",
+        "when": "debugConfigurationType == pwa-node && !inDebugMode || debugConfigurationType == pwa-extensionHost && !inDebugMode || debugConfigurationType == node && !inDebugMode"
+    },
+    {
+        "command": "editor.action.marker.next",
+        "keybinding": "alt+f2",
+        "when": "editorFocus"
+    },
+    {
+        "command": "-editor.action.marker.next",
+        "keybinding": "alt+f8",
+        "when": "editorFocus"
+    },
+    {
+        "command": "editor.action.marker.prevInFiles",
+        "keybinding": "shift+f2",
+        "when": "editorFocus"
+    },
+    {
+        "command": "-editor.action.marker.prevInFiles",
+        "keybinding": "shift+f8",
+        "when": "editorFocus"
+    },
+    {
+        "command": "core.close.tab",
+        "keybinding": "alt+w"
+    }
+]
