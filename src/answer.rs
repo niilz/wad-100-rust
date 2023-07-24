@@ -13,8 +13,13 @@ impl AnswerService {
             client: reqwest::Client::new(),
         }
     }
-    pub async fn submit(&self, answer: &str) -> Result<reqwest::Response, Box<dyn std::error::Error>> {
-        let req = self.client.post(Self::build_path("post"))
+    pub async fn submit(
+        &self,
+        answer: &str,
+    ) -> Result<reqwest::Response, Box<dyn std::error::Error>> {
+        let req = self
+            .client
+            .post(Self::build_path("post"))
             .body(answer.to_string())
             .bearer_auth(JWT);
         //dbg!(&req);
@@ -23,8 +28,7 @@ impl AnswerService {
     }
 
     pub async fn send_jwt_get(&self) -> Result<AuthRes, Box<dyn std::error::Error>> {
-        let req = self.client.get(Self::build_path("bearer"))
-            .bearer_auth(JWT);
+        let req = self.client.get(Self::build_path("bearer")).bearer_auth(JWT);
         //dbg!(&req);
         let res = req.send().await?;
         let res = res.json::<AuthRes>().await?;
