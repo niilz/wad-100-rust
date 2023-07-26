@@ -5,3 +5,5 @@
 - (httpbin - api-testing)[https://httpbin.org/]
 - (jwt-simple - github)[https://github.com/jedisct1/rust-jwt-simple]
 - (jwt-simple - docs)[https://docs.rs/jwt-simple/latest/jwt_simple/]
+- (rust std lib)[https://doc.rust-lang.org/stable/std/]
+
