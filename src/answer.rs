@@ -44,3 +44,47 @@ impl AnswerService {
 pub struct AuthRes {
     token: String,
 }
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    fn json_to_val() {
+        let json_str = r#"
+        {
+            "foo": "bar",
+            "baz": 123,
+            "vec": [4, 5, 6]
+        }
+        "#;
+
+        let v: serde_json::Value = serde_json::from_str(json_str).unwrap();
+        assert_eq!(v["foo"], "bar");
+        assert_eq!(v["baz"], 123);
+        assert_eq!(v["vec"].as_array().unwrap(), &vec![4, 5, 6]);
+    }
+
+    #[test]
+    fn value_to_json() {
+        let expected_raw = r#"
+        {
+            "foo": "bar",
+            "baz": 123,
+            "vec": [4, 5, 6]
+        }
+        "#;
+
+        let expected = serde_json::from_str::<serde_json::Value>(expected_raw)
+            .unwrap()
+            .to_string();
+
+        let v: serde_json::Value = serde_json::json!({
+            "baz": 123,
+            "foo": "bar",
+            "vec": [4, 5, 6]
+        });
+
+        assert_eq!(expected, v.to_string());
+    }
+}
